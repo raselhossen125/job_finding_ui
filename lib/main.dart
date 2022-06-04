@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'screen/dicition_screen.dart';
 import 'screen/onbordingpage_screen.dart';
 import 'screen/spalash_screen.dart';
 
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/': (ctx) => SpalashScreen(),
-        OnBordingPageScreen.routeName: (ctx) => OnBordingPageScreen(),
+         OnBordingPageScreen.routeName: (ctx) => OnBordingPageScreen(),
+         DicitionScreen.routeName: (ctx) => DicitionScreen(),
       },
     );
   }

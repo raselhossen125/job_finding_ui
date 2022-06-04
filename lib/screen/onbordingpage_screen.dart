@@ -2,14 +2,16 @@
 
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:job_finding_ui/screen/home.dart';
+import 'package:job_finding_ui/untils/colors.dart';
+
+import 'dicition_screen.dart';
 
 class OnBordingPageScreen extends StatelessWidget {
   static const routeName = '/onbording-page';
 
   DotsDecorator getDotDecoration() => DotsDecorator(
-        color: Color(0xFFBDBDBD),
-        activeColor: Colors.orange,
+        color: appColor().btn2dColor,
+        activeColor: appColor().cardColor,
         size: Size(10, 10),
         activeSize: Size(22, 10),
         activeShape: RoundedRectangleBorder(
@@ -22,28 +24,20 @@ class OnBordingPageScreen extends StatelessWidget {
         child: IntroductionScreen(
           pages: [
             PageViewModel(
-              title: 'A reader lives a thousand lives',
-              body: 'The man who never reads lives only one.',
+              title: 'Make your dream careear with job',
+              body: 'Create a unice emotonal story thad describes better than words',
               image: Image.asset("assets/onBordingPageImage/ebook.png"),
             ),
             PageViewModel(
-              title: 'Featured Books',
-              body: 'Available right at your fingerprints',
+              title: 'Make interview process more easier',
+              body: 'Create a unice emotonal story thad describes better than words',
               image: Image.asset("assets/onBordingPageImage/readingbook.png")
-            ),
-            PageViewModel(
-              title: 'Simple UI',
-              body: 'For enhanced reading experience',
-              image: Image.asset("assets/onBordingPageImage/manthumbs.png"),
-            ),
-            PageViewModel(
-              title: 'Today a reader, tomorrow a leader',
-              body: 'Start your journey',
-              image: Image.asset("assets/onBordingPageImage/learn.png"),
             ),
           ],
           done: Text('NEXT', style: TextStyle(fontWeight: FontWeight.w600)),
-          onDone: () {Home();},
+          onDone: () {
+            Navigator.of(context).pushReplacementNamed(DicitionScreen.routeName);
+          },
           showSkipButton: true,
           skip: Text('SKIP'),
           dotsDecorator: getDotDecoration(),
