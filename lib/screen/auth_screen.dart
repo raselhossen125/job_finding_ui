@@ -40,6 +40,7 @@ class _AuthScreenState extends State<AuthScreen>
                 titleColor: Colors.black,
               ),
               Container(
+                margin: EdgeInsets.only(top: 10),
                 width: double.infinity,
                 height: 50,
                 child: TabBar(
