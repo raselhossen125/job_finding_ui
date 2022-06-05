@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:job_finding_ui/screen/auth_screen.dart';
 import 'package:job_finding_ui/untils/colors.dart';
 
 class DicitionScreen extends StatelessWidget {
@@ -57,44 +58,49 @@ class DicitionScreen extends StatelessWidget {
                       style: TextStyle(fontSize: 20),
                     ),
                   ),
-                  Container(
-                    height: halfheight * 0.37,
-                    margin: EdgeInsets.only(bottom: halfheight * 0.05),
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: appColor().btnColor,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Candidate",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushNamed(AuthScreen.routeName);
+                    },
+                    child: Container(
+                      height: halfheight * 0.37,
+                      margin: EdgeInsets.only(bottom: halfheight * 0.05),
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: appColor().btnColor,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Candidate",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                              ),
                             ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            "Lets recruit your grate",
-                            style: TextStyle(
-                              color: Colors.grey,
+                            SizedBox(
+                              height: 5,
                             ),
-                          ),
-                          Text(
-                            "candidate faster here",
-                            style: TextStyle(
-                              color: Colors.grey,
+                            Text(
+                              "Lets recruit your grate",
+                              style: TextStyle(
+                                color: Colors.grey,
+                              ),
                             ),
-                          ),
-                        ],
+                            Text(
+                              "candidate faster here",
+                              style: TextStyle(
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
