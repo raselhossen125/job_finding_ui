@@ -1,8 +1,10 @@
-// ignore_for_file: prefer_const_constructors, unused_local_variable, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables, no_leading_underscores_for_local_identifiers
+// ignore_for_file: prefer_const_constructors, unused_local_variable, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables, no_leading_underscores_for_local_identifiers, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
-import 'package:job_finding_ui/untils/back_button.dart';
-import 'package:job_finding_ui/untils/colors.dart';
+import '../untils/back_button.dart';
+import '../untils/colors.dart';
+import '../widget/logIn_widget.dart';
+import '../widget/register_widget.dart';
 
 class AuthScreen extends StatefulWidget {
   static const routeName = 'auth-screen';
@@ -46,7 +48,8 @@ class _AuthScreenState extends State<AuthScreen>
                 child: TabBar(
                   labelColor: appColor().cardColor,
                   unselectedLabelColor: appColor().btnColor,
-                  labelStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  labelStyle:
+                      TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   indicatorColor: appColor().cardColor,
                   controller: _tabController,
                   tabs: [
@@ -59,19 +62,16 @@ class _AuthScreenState extends State<AuthScreen>
                   ],
                 ),
               ),
-              Container(
-                width: double.infinity,
-                height: 400,
-                child: TabBarView(
-                  controller: _tabController,
-                  children: [
-                    Container(
-                      color: Colors.black,
-                    ),
-                    Container(
-                      color: Colors.yellow,
-                    )
-                  ],
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  child: TabBarView(
+                    controller: _tabController,
+                    children: [
+                      LogInWidget(),
+                      RegisterWidget(),
+                    ],
+                  ),
                 ),
               )
             ],

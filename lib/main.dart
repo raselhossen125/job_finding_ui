@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: {
-        '/': (ctx) => SpalashScreen(),
+        '/': (ctx) => AuthScreen(),
          OnBordingPageScreen.routeName: (ctx) => OnBordingPageScreen(),
          DicitionScreen.routeName: (ctx) => DicitionScreen(),
          AuthScreen.routeName: (ctx) => AuthScreen(),
