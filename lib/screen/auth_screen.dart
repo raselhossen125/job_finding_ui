@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, unused_local_variable, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables, no_leading_underscores_for_local_identifiers, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
-import '../untils/back_button.dart';
+import '../untils/back_btn.dart';
 import '../untils/colors.dart';
 import '../widget/logIn_widget.dart';
 import '../widget/register_widget.dart';
@@ -36,10 +36,13 @@ class _AuthScreenState extends State<AuthScreen>
           child: Column(
             children: [
               BackBtn(
-                btnColor: Colors.black,
+                cardBtnColor: Colors.black,
                 cardColor: appColor().greyColor,
                 title: 'Candidate',
                 titleColor: Colors.black,
+                cardBtnIcon: Icon(
+                  Icons.arrow_back,
+                ),
               ),
               Container(
                 margin: EdgeInsets.only(top: 10),

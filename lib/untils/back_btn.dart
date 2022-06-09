@@ -4,21 +4,23 @@ import 'package:flutter/material.dart';
 
 class BackBtn extends StatelessWidget {
   Color cardColor;
-  Color btnColor;
+  Color cardBtnColor;
+  Icon cardBtnIcon;
   Color titleColor;
   String title;
-  // Icon icon;
-  // Color iconColor;
-  // Function btnFunction;
+  // Icon? icon;
+  // Color? iconColor;
+  // Function? btnFunction;
 
   BackBtn({
     required this.cardColor,
-    required this.btnColor,
+    required this.cardBtnColor,
+    required this.cardBtnIcon,
     required this.titleColor,
     required this.title,
-    //  this.icon = ,
-    //  this.iconColor = ,
-    //  this.btnFunction = ,
+    // this.icon,
+    // this.iconColor,
+    // this.btnFunction,
   });
 
   @override
@@ -34,17 +36,15 @@ class BackBtn extends StatelessWidget {
             onPressed: () {
               Navigator.of(context).pop();
             },
-            icon: Icon(
-              Icons.arrow_back,
-              color: btnColor,
-            ),
+            icon: cardBtnIcon,
+            color: cardBtnColor,
           ),
         ),
         SizedBox(
           width: 20,
         ),
         Text(
-          title,
+          title.toString(),
           style: TextStyle(
               fontSize: 20, fontWeight: FontWeight.bold, color: titleColor),
         ),
@@ -53,7 +53,7 @@ class BackBtn extends StatelessWidget {
         //   onPressed: () {
         //     btnFunction;
         //   },
-        //   icon: icon,
+        //   icon: icon!,
         //   color: iconColor,
         // ),
       ],
