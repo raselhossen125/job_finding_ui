@@ -6,6 +6,7 @@ import 'screen/dicition_screen.dart';
 import 'screen/home_screen.dart';
 import 'screen/onbordingpage_screen.dart';
 import 'screen/spalash_screen.dart';
+import 'screen/showBottomNav_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
          OnBordingPageScreen.routeName: (ctx) => OnBordingPageScreen(),
          DicitionScreen.routeName: (ctx) => DicitionScreen(),
          AuthScreen.routeName: (ctx) => AuthScreen(),
-         HomeScreen.routeName: (ctx) => HomeScreen(),
+         ShowBottomNavScreen.routeName: (ctx) => ShowBottomNavScreen(),
       },
     );
   }

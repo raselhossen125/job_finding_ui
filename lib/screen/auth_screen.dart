@@ -30,8 +30,8 @@ class _AuthScreenState extends State<AuthScreen>
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: 10,
-            vertical: 10,
+            horizontal: 15,
+            vertical: 15,
           ),
           child: Column(
             children: [

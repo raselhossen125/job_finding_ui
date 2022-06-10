@@ -2,7 +2,6 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
-
 import 'onbordingpage_screen.dart';
 
 class SpalashScreen extends StatefulWidget {

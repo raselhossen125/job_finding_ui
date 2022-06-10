@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_final_fields, no_leading_underscores_for_local_identifiers, unused_local_variable, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:job_finding_ui/untils/colors.dart';
+import '../untils/colors.dart';
 
 class RegisterWidget extends StatefulWidget {
   @override
@@ -21,6 +21,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
             TextFormField(
               cursorColor: appColor().cardColor,
               decoration: InputDecoration(
+                contentPadding: EdgeInsets.all(0),
                 labelText: "Your Email",
                 labelStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
@@ -47,6 +48,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
             TextFormField(
               cursorColor: appColor().cardColor,
               decoration: InputDecoration(
+                contentPadding: EdgeInsets.all(0),
                 labelText: "Your Name",
                 labelStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
@@ -74,6 +76,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
               obscureText: _visibility ? false : true,
               cursorColor: appColor().cardColor,
               decoration: InputDecoration(
+                contentPadding: EdgeInsets.all(0),
                 suffixIcon: IconButton(
                   icon: Icon(
                     _visibility ? Icons.visibility : Icons.visibility_off,

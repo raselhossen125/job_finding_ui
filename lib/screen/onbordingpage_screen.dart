@@ -2,8 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:job_finding_ui/untils/colors.dart';
-
+import '../untils/colors.dart';
 import 'dicition_screen.dart';
 
 class OnBordingPageScreen extends StatelessWidget {
