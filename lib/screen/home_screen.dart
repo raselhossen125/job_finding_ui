@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../provider/work_data.dart';
 import '../untils/colors.dart';
 import '../widget/work_item_widget.dart';
 
@@ -9,6 +11,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final data = Provider.of<Work>(context, listen: false);
     return Scaffold(
       backgroundColor: appColor().bgColor,
       body: SafeArea(
@@ -106,7 +109,13 @@ class HomeScreen extends StatelessWidget {
               ),
               Container(
                 height: 44,
-                child: WorkItemWidget(),
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: data.workData.length,
+                  itemBuilder: (context, index) {
+                    return WorkItemWidget(index);
+                  },
+                ),
               ),
             ],
           ),

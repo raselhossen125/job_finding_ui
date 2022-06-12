@@ -1,32 +1,29 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
-
-import '../data/work_data.dart';
+import 'package:provider/provider.dart';
+import '../provider/work_data.dart';
 import '../untils/colors.dart';
 
 class WorkItemWidget extends StatelessWidget {
-  const WorkItemWidget({Key? key}) : super(key: key);
+  final int index;
+
+  WorkItemWidget(this.index);
 
   @override
   Widget build(context) {
-    return ListView.builder(
-      scrollDirection: Axis.horizontal,
-      itemCount: workData.length,
-      itemBuilder: (context, index) {
-        return Card(
-          color: appColor().greyColor,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Text(
-              workData[index],
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-            ),
-          ),
-        );
-      },
+    final data = Provider.of<Work>(context, listen: false);
+
+    return Card(
+      color: appColor().greyColor,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Text(
+          data.workData[index],
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+        ),
+      ),
     );
   }
 }
