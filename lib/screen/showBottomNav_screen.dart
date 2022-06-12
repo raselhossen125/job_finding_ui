@@ -40,10 +40,14 @@ class _ShowBottomNavScreenState extends State<ShowBottomNavScreen> {
           selectedIndex: index,
           onDestinationSelected: (index) => setState(() => this.index = index),
           destinations: [
+            
             NavigationDestination(icon: Icon(Icons.home), label: "Home"),
             NavigationDestination(icon: Icon(Icons.air), label: "Applications"),
             NavigationDestination(icon: Icon(Icons.message), label: "Message"),
-            NavigationDestination(icon: Icon(Icons.people), label: "Me"),
+            NavigationDestination(icon: CircleAvatar(
+              radius: 13,
+              backgroundImage: AssetImage('assets/onBordingPageImage/me.jpg'),
+            ), label: 'Me')
           ],
         ),
       ),
