@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'provider/populars_designe.dart';
 import 'provider/work_data.dart';
 import 'screen/auth_screen.dart';
 import 'screen/dicition_screen.dart';
@@ -9,6 +10,7 @@ import 'screen/home_screen.dart';
 import 'screen/onbordingpage_screen.dart';
 import 'screen/spalash_screen.dart';
 import 'screen/showBottomNav_screen.dart';
+import 'widget/home_tabBar_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +24,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (ctx) => Work()),
+        ChangeNotifierProvider(create: (ctx) => Populars()),
       ],
       child: MaterialApp(
       debugShowCheckedModeBanner: false,
